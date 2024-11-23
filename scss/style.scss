@@ -1,0 +1,200 @@
+@import '../node_modules/bootstrap/scss/bootstrap.scss';
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,800;1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Glitch&display=swap');
+
+// Paleta Monokai modernizada
+$background-dark: #0f1016; // Fundo azul escuro
+$text-light: #abb2bf; // Texto principal (cinza claro)
+$highlight-green: #98c379; // Verde suave
+$highlight-orange: #d19a66; // Laranja moderno
+$highlight-purple: #c678dd; // Roxo vibrante
+$highlight-blue: #61afef; // Azul moderno
+$highlight-red: #e06c75; // Vermelho suave
+$border-color: #1b1d20; // Bordas
+$text-darker: #0f1016;
+
+// Fonte principal e estilo do body
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: $background-dark;
+    color: $text-light;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+
+nav {
+    background-color: $border-color;
+    color: $text-light;
+    font-size: 0.875rem;
+    border-top: 2px solid $highlight-purple;
+}
+
+// Main e estilos centrais
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    h1{
+        font-family: "Rubik Glitch", system-ui;
+        font-style: normal;
+        font-size: 8rem;
+        font-weight: bold;
+    }
+
+
+    .btn-group {
+        margin-top: 20px;
+        gap: 20px;
+        display: flex;
+        justify-content: center;
+
+        .btn {
+            border: none;
+            padding: 10px 20px;
+            font-size: 1rem;
+            color: $text-light;
+            transition: 0.3s ease;
+            
+            &:hover {
+              opacity: 0.8;
+              transform: translateY(-2px);
+            }
+          
+            &.btn-primary {
+              background-color: $highlight-blue;
+              border-radius: 50px; // Pills
+              color: $text-darker;
+              border: 2px solid $highlight-blue;
+              
+              &:hover {
+                background-color: darken($highlight-blue, 10%);
+                border: 2px solid darken($highlight-blue, 10%);
+              }
+            }
+          
+            &.btn-secondary {
+              background-color: $highlight-purple;
+              border-radius: 50px; // Pills
+              color: $text-darker;
+              border: 2px solid $highlight-purple;
+              
+              &:hover {
+                background-color: darken($highlight-purple, 10%);
+                border: 2px solid darken($highlight-purple, 10%);
+              }
+            }
+          
+            &.btn-success {
+              background-color: $highlight-green;
+              border-radius: 50px; // Pills
+              color: $text-darker;
+              border: 2px solid $highlight-green;
+              
+              &:hover {
+                background-color: darken($highlight-green, 10%);
+                border: 2px solid darken($highlight-green, 10%);
+              }
+            }
+          
+            &.btn-danger {
+              background-color: $highlight-red;
+              border-radius: 50px; // Pills
+              color: $text-darker;
+              border: 2px solid $highlight-red;
+              
+              &:hover {
+                background-color: darken($highlight-red, 10%);
+                border: 2px solid darken($highlight-red, 10%);
+              }
+            }
+        }
+    }
+}
+
+// Rodapé
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: $border-color;
+    color: $text-light;
+    font-size: 0.875rem;
+    border-top: 2px solid $highlight-purple;
+}
+
+#typewriter {
+    font-family: "Rubik Glitch", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    color: $highlight-green;
+    font-size: 8rem;
+    overflow: hidden; /* Esconde o texto extra */
+    white-space: nowrap; /* Garante que o texto fique em uma linha */
+    border-right: 2px solid $highlight-green; /* Simula o cursor */
+    animation: blink-caret 0.6s step-end infinite;
+  
+    @keyframes blink-caret {
+      from, to {
+        border-color: transparent;
+      }
+      50% {
+        border-color: $highlight-green;
+      }
+    }
+  }
+
+  @keyframes glitch {
+    0% {
+      text-shadow: 2px 2px #f40, -2px -2px #0ff;
+      transform: translate(0, 0);
+    }
+    20% {
+      text-shadow: -2px 0 #0ff, 2px 2px #f40;
+      transform: translate(-2px, 2px);
+    }
+    40% {
+      text-shadow: 4px -2px #f40, -4px 4px #0ff;
+      transform: translate(4px, -2px);
+    }
+    60% {
+      text-shadow: -1px 4px #0ff, 2px -4px #f40;
+      transform: translate(-1px, 4px);
+    }
+    80% {
+      text-shadow: -2px -2px #f40, 4px 4px #0ff;
+      transform: translate(-4px, -2px);
+    }
+    100% {
+      text-shadow: 2px 2px #f40, -2px -2px #0ff;
+      transform: translate(0, 0);
+    }
+  }
+  
+  .glitch {
+    color: #fff;
+    position: relative;
+    text-shadow: 2px 2px #f40, -2px -2px #0ff;
+    user-select: none; /* Evita seleção acidental */
+  }
+
+  
+
+/* Glitch ativo */
+.glitch-active {
+    text-shadow: 2px 2px #f40, -2px -2px #0ff;
+    animation: glitch 0.3s infinite ease-in-out;
+  }
+
+
+
+
+
+
+
+
+  
